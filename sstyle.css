@@ -1,0 +1,417 @@
+@charset "UTF-8";
+
+
+/*                    共通部分                       */
+
+
+
+/* ユーザの指定した文字サイズを正しく反映させる
+------------------------------------ */
+html{
+    font-size: 32px;
+}
+
+
+/* 書体の指定、(行の高さ1.5~1.9がジャスト)
+------------------------------------ */
+body{
+    font-family: "Yu Gothic Medium","遊ゴシック Medium","遊ゴシック体",sans-serif;
+    line-height: 1.7;
+}
+
+
+/* <a>タグの傍線の指定(無くす)
+------------------------------------ */
+a{
+    text-decoration: none;
+    
+}
+
+
+/* (柴犬)画像の大きさの指定、画像が親要素より大きくなる事を防ぐ
+------------------------------------ */
+img{
+    max-width: 100%;
+}
+
+
+
+/*                   HEADER                        */
+
+
+/* 柴犬の画像の大きさ調整
+------------------------------------ */
+.dog{
+    width: 10rem;
+    margin-top: 5%;
+    border-radius: 50%;
+    display: none;
+}
+/* 背景
+----------------------------------*/
+.haikei{
+    background-image:url(../image/haikei.jpeg);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Filter{
+    background-color: rgba(0,0,0,0.4);
+    min-height: 100vh;
+}
+
+/* クラス(nav)の設定
+------------------------------------ */
+.nav{
+    display: flex;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    margin-top: 1%;
+    list-style: none;
+    
+}
+
+
+.nav li{
+    margin-left: 33%;
+    margin-top: 8%;
+}
+
+.nav a{
+    color:white;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+    color: #87ceeb;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 33rem;
+    padding: 0 4%;
+    
+}
+
+
+
+.port{
+    margin-left: 5%;
+    color: white;
+}
+
+
+/*自己紹介
+-------------------------------------------*/
+
+
+#about{
+    text-align:center;
+    margin-top: 120px;
+    
+}
+
+
+.ikushima{
+    margin-left: 9%;
+}
+
+.me{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+
+.me p{
+    font-family: "Yu Gothic Medium","遊ゴシック Medium","遊ゴシック体",sans-serif;
+    font-size: 0.6rem;
+    font-weight: bold;
+    line-height: 2.4;
+}
+/*スキル
+---------------------------------*/
+.big{
+    background-image: url(../image/pcc.jpg);
+    background-size: cover;
+}
+.moji{
+    filter: brightness(200%);
+}
+#skils{
+    text-align: center;
+    color:white;
+}
+.xx{
+    position: relative;right: 10px;
+}
+.yy{
+    position: relative;left: 25px;
+}
+.zz{
+    position: relative;left: 25px;
+}
+
+
+.box{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.boxx{
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-left: 25px;
+    font-weight: bold;
+}
+
+.moji{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: "Yu Gothic Medium","遊ゴシック Medium","遊ゴシック体",sans-serif;
+    font-size: 0.7rem;
+    padding-left: 50px;
+}
+
+.moji p{
+    text-align: center;
+}
+
+
+/*スキルグラフ
+----------------------------------------*/
+
+.graf{
+    margin: 40px;
+    list-style: none;
+    background: url(../image/gu.png);
+    background-size: cover;
+    border: 1px solid;
+}
+
+.graf li {
+    height: 50px;
+    padding top: 10px;
+    line-height: 40px;
+    margin: 40px 0;
+    color: white;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 0.6rem;
+}
+
+.graf li span {
+    padding-right: 20px;
+    font-size: 0.6rem;
+    font-weight: 800;
+    float: right;                       /*float: rightは右寄せ*/
+}
+
+.cafe{
+    background-color:azure;
+    background-size: cover;
+    text-align: center;
+    font-family: "Yu Gothic Medium","遊ゴシック Medium","遊ゴシック体",sans-serif;
+    padding: 40px;
+    position: relative;top: -39px;
+}
+
+
+/*ホーム
+---------------------------*/
+
+.last{
+    background-color: #bce2e8;
+    background-size: cover;
+    position: relative;top: -35px;
+    text-align: center;
+}
+#contact{
+    text-align: center;
+    position: relative;top: -8px;     /*position　relativeはその場から変更*/
+}
+
+.last div{
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+label{
+    font-size: 0.65rem;
+    margin-bottom: 15px;
+    display: block;                   /*ブロックレベル要素に変える*/
+    
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type"tel"]{
+    width: 100%;
+    max-width: 220px;
+}
+
+textarea{
+    width: 100%;
+    max-width: 550px;
+    height: 6rem;
+}
+
+input[type="submit"]{
+    background-color:#0bd;
+    color: white;
+    border-radius: 8px;
+    cursor:pointer;               /*cursor,マウスカーソルの形を指定するプロパティ*/
+    line-height: 1;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;left: 40px; 
+    
+}
+
+.botan:hover{
+    background:#0090aa;
+}
+
+/*フッター
+------------------------------------------*/
+
+.sita{
+    text-align: center;
+    padding: 25px 0;
+}
+.sita p{
+    font-size: 0.7rem;
+}
+
+
+
+
+/*モバイル版(メディアクエリー)
+------------------------------------------------*/
+
+@media(max-width:620px){
+    .header{
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* header */
+    .dog{
+        width: 40%;
+        height: 300%;
+    }
+    .header nav{
+        font-size: 0.7rem;
+        margin-top: 10px;
+        margin: 0 15px;
+    }
+    
+    .nav li{
+        margin-left: 20px;
+        
+    }
+    
+
+    .port{
+        font-size: 1.2rem;
+    }
+    #about{
+        font-size: 1.2rem;
+    }
+    
+    .me{
+        flex-direction: column;
+        align-items: center;
+    }
+    .ikushima{
+        width: 80%;
+        height: 80%;
+        position: relative; left: 10px;
+    }
+    .me p{
+        font-size: 0.5rem;
+        margin: 30px;
+    }
+    .big{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-size: cover;
+    }
+    .o{
+        padding: 0 20px;
+    }
+    
+    .boxx{
+        font-size: 0.7rem;
+    }
+    .xx{
+        margin-right: 40px;
+    }
+    .yy{
+        margin-right: 40px;
+    }
+    .zz{
+        margin-right: 20px;
+    }
+    
+    .moji{
+        padding: 0 18px;
+    }
+    
+    
+    .graf{
+        width: 450px;
+    }
+    
+    .last div input[type="text"],
+              input[type="email"],
+              input[type="tel"]{
+        max-width:88%;
+    }
+    
+    .last div textarea{
+        max-width: 98%;
+    }
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
